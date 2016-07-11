@@ -9,7 +9,7 @@ def second_challenge
   }
 
   #binding.pry
-  groceries.collect {|k, v| v}.flatten
+  groceries.values.flatten
   
 
 end

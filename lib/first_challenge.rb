@@ -14,10 +14,16 @@ def first_challenge
       favorite_icecream_flavors: ["strawberry", "cookie dough", "mint chip"]
     }
   }
-#binding.pry
 
-  contacts["Freddy Mercury"][:favorite_icecream_flavors].shift
+  contacts["Freddy Mercury"].each do |k, v|
+    if k == :favorite_icecream_flavors
+      v.delete_if {|flavor| flavor == "strawberry"}
+    end
+  end
+
   contacts
+  # binding.pry
+
 
 end
 
